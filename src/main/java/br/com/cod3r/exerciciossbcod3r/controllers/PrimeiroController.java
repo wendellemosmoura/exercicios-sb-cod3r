@@ -12,6 +12,6 @@ public class PrimeiroController {
     public String ola() {
         return "This could be the day that we push through\n" +
                 "<br>It could be the day that all our dreams come true\n" +
-                "<br>For me and you...";
+                "<br>For me and you";
     }
 }
