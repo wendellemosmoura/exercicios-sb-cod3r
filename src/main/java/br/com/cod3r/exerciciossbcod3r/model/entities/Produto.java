@@ -1,6 +1,5 @@
 package br.com.cod3r.exerciciossbcod3r.model.entities;
 
-import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -11,7 +10,6 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @NoArgsConstructor
-@AllArgsConstructor
 @Entity
 public class Produto {
 
@@ -24,7 +22,17 @@ public class Produto {
     @Setter
     private String nome;
 
-    public Produto(String nome) {
+    @Getter
+    @Setter
+    private double preco;
+
+    @Getter
+    @Setter
+    private double desconto;
+
+    public Produto(String nome, double preco, double desconto) {
         this.nome = nome;
+        this.preco = preco;
+        this.desconto = desconto;
     }
 }
