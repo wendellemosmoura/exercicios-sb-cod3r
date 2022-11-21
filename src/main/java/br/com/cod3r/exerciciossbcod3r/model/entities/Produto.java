@@ -12,27 +12,22 @@ import javax.validation.constraints.Max;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotBlank;
 
+@Getter
+@Setter
 @NoArgsConstructor
 @Entity
 public class Produto {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Getter
     public int id;
 
-    @Getter
-    @Setter
     @NotBlank
     private String nome;
 
-    @Getter
-    @Setter
     @Min(0)
     private double preco;
 
-    @Getter
-    @Setter
     @Min(0)
     @Max(1)
     private double desconto;
